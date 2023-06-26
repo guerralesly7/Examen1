@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Examen1.Views.Contacto">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+
+                <Image x:Name="foto" WidthRequest="100" HeightRequest="200" />
+
+                <Button x:Name="btnfoto" Text="Capturar imagen" Clicked="btnfoto_Clicked" />
+
+                <Label x:Name="geoloc" />
+
+                <Label Text="Nombres" />
+                <Entry x:Name="nombres" Placeholder="Ingrese su nombres" />
+
+                <Label Text="Apellidos" />
+                <Entry x:Name="apellidos" Placeholder="Ingrese sus apellidos" />
+
+                <Label Text="Telefono" />
+                <Entry x:Name="telefono" Placeholder="Ingrese su telefono" Keyboard="Telephone" />
+
+                <Label Text="Edad" />
+                <Entry x:Name="edad" Placeholder="Ingrese su edad" Keyboard="Numeric" />
+
+                <Label Text="Pais" />
+                <Picker x:Name="pais" Title="Seleccione un pais">
+                    <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>Honduras</x:String>
+                            <x:String>Costa Rica</x:String>
+                            <x:String>Guatemala</x:String>
+                            <x:String>El Salvador</x:String>
+                        </x:Array>
+                    </Picker.ItemsSource>
+
+                </Picker>
+
+                <Label Text="Nota" />
+                <Entry x:Name="nota" Placeholder="Ingrese una nota" />
+
+                <Button x:Name="btnsalvar"  Text="Salvar Contacto" Clicked="btnsalvar_Clicked"/>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
